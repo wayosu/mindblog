@@ -16,8 +16,7 @@
 }
 
 .title {
-    font-size: 64px;
-    margin-bottom: 50px;
+    font-size: 48px;
 }
 
 .user {
@@ -39,8 +38,13 @@
 }
 
 .username {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
+}
+
+.date { 
+    font-size: 16px;
+    font-weight: 300;
 }
 
 .userImageContainer {
@@ -80,4 +84,75 @@
     margin-bottom: 20px;
     line-height: 1.5;
     text-align: justify;
+}
+
+@media screen and (max-width: 1536px) {
+    .title {
+        font-size: 42px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .title {
+        font-size: 36px;
+    }
+
+    .username {
+        font-size: 16px;
+    }
+
+    .date {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .infoContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .textContainer {
+        flex: auto;
+    }
+
+    .imageContainer {
+        width: 100%;
+        flex: auto;
+    }
+
+    .post {
+        margin-top: 30px;
+    }
+}
+  
+@media screen and (max-width: 640px) {
+    .title {
+        font-size: 28px;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+
+    .date {
+        font-size: 12px;
+    }
+
+    .userImageContainer {
+        width: 40px;
+        height: 40px;
+    }
+
+    .imageContainer {
+        height: 250px;
+    }
+
+    .description h2 {
+        font-size: 24px;
+    }
+    
+    .description p{
+        font-size: 16px;
+    }
 }

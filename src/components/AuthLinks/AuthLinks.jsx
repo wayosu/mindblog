@@ -8,7 +8,7 @@ const AuthLinks = () => {
   const [open, setOpen] = useState(false);
 
   // temporary
-  const status = "notauthenticated";
+  const status = "authenticated";
   return (
     <>
       {status === "notauthenticated" ? (
@@ -30,15 +30,27 @@ const AuthLinks = () => {
       </div>
       {open && (
         <div className={styles.responsiveMenu}>
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="/" className={styles.responsiveLink}>
+            Home
+          </Link>
+          <Link href="/" className={styles.responsiveLink}>
+            About
+          </Link>
+          <Link href="/" className={styles.responsiveLink}>
+            Contact
+          </Link>
           {status === "notauthenticated" ? (
-            <Link href="/login">Login</Link>
+            <Link href="/login" className={styles.responsiveLink}>
+              Login
+            </Link>
           ) : (
             <>
-              <Link href="/write">Write</Link>
-              <span className={styles.link}>Logout</span>
+              <Link href="/write" className={styles.responsiveLink}>
+                Write
+              </Link>
+              <Link href="/logout" className={styles.responsiveLink}>
+                Logout
+              </Link>
             </>
           )}
         </div>

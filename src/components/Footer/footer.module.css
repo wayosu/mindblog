@@ -25,6 +25,8 @@
 
 .desc {
     font-weight: 300;
+    line-height: 1.5;
+    text-align: justify;
 }
 
 .icons {
@@ -70,6 +72,18 @@
 }
 
 @media screen and (max-width: 640px) {
+    .container {
+        margin-top: 30px;
+    }
+
+    .info {
+        gap: 20px;
+    }
+
+    .desc {
+        font-size: 14px;
+    }
+
     .links {
         font-size: 14px;
     }

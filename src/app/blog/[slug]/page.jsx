@@ -2,13 +2,14 @@ import React from "react";
 import styles from "./singlePage.module.css";
 import Menu from "@/components/Menu/Menu";
 import Image from "next/image";
+import Comments from "@/components/Comments/Comments";
 
 const Page = () => {
   return (
     <div className={styles.container}>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
-          <h1>
+          <h1 className={styles.title}>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi,
             atque dolor ratione non repellendus eaque!
           </h1>
@@ -63,6 +64,9 @@ const Page = () => {
               accusantium alias ipsam! Ipsum id aperiam laboriosam soluta
               mollitia rem excepturi rerum quisquam at enim quasi maxime.
             </p>
+          </div>
+          <div className={styles.comment}>
+            <Comments />
           </div>
         </div>
         <Menu />
