@@ -6,7 +6,7 @@ const Featured = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>
-        <b>Hey, minders!</b> {"Let's"} make a post out of your thoughts.
+        <b>Hai, minders!</b> Ayo buat tulisan dari pikiranmu.
       </h1>
       <div className={styles.post}>
         <div className={styles.imgContainer}>
@@ -23,7 +23,7 @@ const Featured = () => {
             mollitia dolorem minus, esse nulla blanditiis repellat quibusdam
             dolore officia. Vitae.
           </p>
-          <button className={styles.button}>Read More</button>
+          <button className={styles.button}>Baca Sekarang</button>
         </div>
       </div>
     </div>

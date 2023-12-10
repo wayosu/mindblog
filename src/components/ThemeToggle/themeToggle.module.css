@@ -1,6 +1,7 @@
 .container {
     width: 40px;
-    height: 20px;
+    height: 19px;
+    padding: 0 5px;
     border-radius: 50px;
     cursor: pointer;
     display: flex;
@@ -8,11 +9,13 @@
     justify-content: space-between;
     background-color: var(--textColor);
     position: relative;
+    transition: all .3s ease;
 }
 
 .ball {
     width: 15px;
     height: 15px;
+    margin: 0 1px;
     border-radius: 50%;
     background-color: white;
     position: absolute;
