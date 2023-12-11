@@ -1,0 +1,91 @@
+.container {
+    
+}
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+}
+
+.button, .addButton {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: var(--bg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #b3b3b1;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.image {
+    width: fit-content;
+}
+
+.addButton {
+    border-color: #1a8917;
+}
+
+.add {
+    display: flex;
+    gap: 20px;
+    background-color: transparent;
+    position: absolute;
+    z-index: 999;
+    width: max-content;
+    left: 50px;
+}
+
+.input {
+    width: 100%;
+    padding: 50px 0;
+    font-size: 64px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: var(--textColor);
+}
+
+.input::placeholder {
+    color: #b3b3b1;
+}
+
+.textarea {
+    width: 100%;
+}
+
+.publish {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #1a8917;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 640px) {
+    .editor {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .button, .addButton {
+        width: 28px;
+        height: 28px;
+    }
+
+    .button {
+        margin-left: 10px;
+    }
+
+    .input {
+        font-size: 32px;
+        padding: 30px 15px;
+    }
+}
