@@ -3,11 +3,13 @@ import styles from "./card.module.css";
 import Image from "next/image";
 import Link from "next/link";
 
-const Card = ({ key, item }) => {
+const Card = ({ myKey, item }) => {
   return (
-    <div key={key} className={styles.container}>
+    <div key={myKey} className={styles.container}>
       <div className={styles.imageContainer}>
-        <Image src="/p1.jpeg" alt="" fill className={styles.image} />
+        {item.img && (
+          <Image src={item.img} alt="" fill className={styles.image} />
+        )}
       </div>
       <div className={styles.textContainer}>
         <div className={styles.detail}>
@@ -16,11 +18,11 @@ const Card = ({ key, item }) => {
           </span>
           <span className={styles.category}>{item.catSlug}</span>
         </div>
-        <Link href="/">
+        <Link href={`/blog/${item.slug}`}>
           <h1>{item.title}</h1>
         </Link>
-        <p className={styles.desc}>{item.desc}</p>
-        <Link href="/" className={styles.link}>
+        <p className={styles.desc}>{item.desc.substring(0, 60)}</p>
+        <Link href={`/blog/${item.slug}`} className={styles.link}>
           Baca Sekarang
         </Link>
       </div>
